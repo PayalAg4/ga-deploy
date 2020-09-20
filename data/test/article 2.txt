@@ -1,0 +1,3 @@
+Other types of accounts for which Twitter is requiring or recommending these security measures include those belonging to members of the US Congress, US governors and secretaries of state, political candidates that have Twitter's "Election Labels" and some major US news outlets and political journalists.
+
+Twitter said that in the coming weeks it would put in place other internal security safeguards for the accounts, including better detections to help the company and account holders respond quickly to suspicious activity and increased login defenses to prevent malicious account takeover attempts.
