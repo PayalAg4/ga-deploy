@@ -63,24 +63,26 @@ class SummarizeDoc:
         topnIdx = sortedIdx[-n:]
         topnSentences = [sentences[i] for i in topnIdx]
         return topnSentences
-    
-    def findSummary(self):
-        filePath = self.config['data_path']['train_data']
-        text = self.loadDocs(filePath)
-        sentences = self.splitSentences(text)
-        firstSent,restOfSent = self.groupSentence(sentences)
-        sentLengths = self.findSentLengthArray(restOfSent)
-        topSentences = self.findTopSentences(sentLengths,restOfSent,self.config['sentences_num'])
-        allSentences = [firstSent] + topSentences
-        summary = ' '.join(allSentences)
-        return summary
-    
+ 
     def preprocess(self,text):
         preprocessObj = PreprocessDoc()
         filteredText = preprocessObj.removeSpclChar(text)
         filteredText = preprocessObj.convertToLower(filteredText)
         return filteredText
         
+    def findSummary(self):
+        filePath = self.config['data_path']['train_data']
+        text = self.loadDocs(filePath)
+        filteredText = self.preprocess(text)
+        sentences = self.splitSentences(filteredText)
+        firstSent,restOfSent = self.groupSentence(sentences)
+        sentLengths = self.findSentLengthArray(restOfSent)
+        topSentences = self.findTopSentences(sentLengths,restOfSent,self.config['sentences_num'])
+        allSentences = [firstSent] + topSentences
+        summary = '. '.join(allSentences)
+        return summary
+    
+    
 summarizeObj = SummarizeDoc()
 summary = summarizeObj.findSummary()
 

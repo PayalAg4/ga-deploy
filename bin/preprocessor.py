@@ -22,10 +22,12 @@ class PreprocessDoc:
         Output:
             modifiedText: string
         """
-        filteredText = re.sub(',|;|#|','',text)
+        filteredText = re.sub(',|;|#|$','',text)
         return filteredText
     
     def convertToLower(self,text):
         return text.lower()
+    
+
     
    
