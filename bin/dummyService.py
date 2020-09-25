@@ -10,17 +10,17 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/home',methods=(['GET']))
+@app.route('/home',methods=['GET'])
 def checkStatus():
-    return "YAY!! its working"
+    return "YAY!! its working!"
 
-@app.route('/add',methods=(['GET']))
-def convertLower():
-    a= 2
+@app.route('/add',methods=['GET'])
+def addNum():
+    a = 2
     b = 3
-    return "The sum of {} and {}".format(a,b,a+b)
+    return " The sum of {} and {} is {} ".format(a,b,a+b)
     
 
-app.run(host='localhost',port=8023)
+app.run(host='localhost',port=1123)
 
 

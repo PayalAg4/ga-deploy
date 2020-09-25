@@ -33,3 +33,42 @@ git push origin master
 git add . 
 git commit -m "first commit"
 git push origin master
+
+SOAP(old)
+REST (popular) - fundamental principle of API
+
+CRUD
+C - Create
+R - Readable
+U - Update
+D - Delete
+
+
+REST
+GET - Read
+PUT - Update
+POST - Create
+DELETE - Delete
+
+
+Framework
+Python
+
+
+Flask - Most popular
+Django - Popular
+Bottle - One page design
+FastAPI - New
+
+
+
+
+
+
+
+
+
+
+
+
+
