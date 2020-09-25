@@ -26,6 +26,10 @@ local --> push --> git repo --> aws instance --> aws instance --> deploy
 git init
 git add . 
 git commit -m "first commit"
-git reemote add origin "path"
+git remote add origin "path"
 git push origin master
 
+
+git add . 
+git commit -m "first commit"
+git push origin master

@@ -32,19 +32,36 @@ class SummarizeDoc:
         return sentences
     
     def groupSentence(self,sentences):
+        """
+        Split the sentences into first sentences and rest of the sentences
+        
+        Input:
+            sentences: a list of string
+        Output:
+            firstSent: string
+            restOfSent: a list of string
+        """
         firstSent, restOfSent = sentences[0],sentences[1:]
         return firstSent, restOfSent
     
     def findSentLength(self,text):
+        """
+        Find the length of the sentences
+        
+        Input:
+            text: a list of string
+        Output:
+            
+        """
         return text.split()
             
-    def findsentLengthArray(self,sentences):
+    def findSentLengthArray(self,sentences):
         return [self.findSentLength(sent) for sent in sentences]
     
     def findTopSentences(self,sentLengths,sentences,n):
         sortedIdx = np.argsort(sentLengths)
-        top3Idx = sortedIdx[-n:]
-        topnSentences = [sentences[i] for i in top3Idx]
+        topnIdx = sortedIdx[-n:]
+        topnSentences = [sentences[i] for i in topnIdx]
         return topnSentences
     
     def findSummary(self):
@@ -52,7 +69,7 @@ class SummarizeDoc:
         text = self.loadDocs(filePath)
         sentences = self.splitSentences(text)
         firstSent,restOfSent = self.groupSentence(sentences)
-        sentLengths = self.findsentLengthArray(restOfSent)
+        sentLengths = self.findSentLengthArray(restOfSent)
         topSentences = self.findTopSentences(sentLengths,restOfSent,self.config['sentences_num'])
         allSentences = [firstSent] + topSentences
         summary = ' '.join(allSentences)
