@@ -83,8 +83,8 @@ class SummarizeDoc:
         return summary
     
     
-summarizeObj = SummarizeDoc()
-summary = summarizeObj.findSummary()
+#summarizeObj = SummarizeDoc()
+#summary = summarizeObj.findSummary()
 
 
 

@@ -17,8 +17,8 @@ def checkStatus():
 @app.route('/add',methods=['GET'])
 def addNum():
     a = 2
-    b = 3
-    return " The sum of {} and {} is {} ".format(a,b,a+b)
+    b = 6
+    return " The sum of {} & {} is {} ".format(a,b,a+b)
     
 
 app.run(host='localhost',port=1123)
