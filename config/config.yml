@@ -1,4 +1,4 @@
 data_path:
-    train_data: C:/Users/payal/Documents/ga-deploy/data/train/article1.txt
+    train_data: C:/Users/payal/Documents/ga-deploy/data/train/article2.txt
     test_data: C:/Users/payal/Documents/ga-deploy/data/test/article1.txt
 sentences_num: 3

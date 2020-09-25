@@ -19,12 +19,14 @@ class SummarizeDoc:
             text = fl.read()
         return text
     
-    def loadConfig(self):
-        pass
-    
     def splitSentences(self,text):
         """
-        Split paragraph into an
+        Split paragraph into array of sentences
+        
+        Input:
+            text: string
+        Output:
+            sentences: a list of string
         """
         sentences = text.split('.')
         return sentences

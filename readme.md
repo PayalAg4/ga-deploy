@@ -10,9 +10,22 @@ Document summarisation
    	- summarizer.py
 		Class SummarizeDoc
 			functions
+			- readDocs
+			- loadConfig
 	  		- splitter
-	  		- firstSentExtractor
+	  		- groupSentence
 	  		- findNumWords
 	  		- findTop3Sent
 	  		- sentenceCombiner 
-# ga-deploy
+	  		
+	  		
+relative path
+
+local --> push --> git repo --> aws instance --> aws instance --> deploy
+
+git init
+git add . 
+git commit -m "first commit"
+git reemote add origin "path"
+git push origin master
+
