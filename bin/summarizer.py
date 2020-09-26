@@ -8,6 +8,7 @@ import yaml
 import numpy as np
 from preprocessor import PreprocessDoc
 
+
 class SummarizeDoc:
     
     def __init__(self):
